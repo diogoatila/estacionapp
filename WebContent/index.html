@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EstacionApp</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="../dependencies/material.min.css">
+<script src="../dependencies/material.min.js"></script>
+<script src="global.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Roboto', ;">
+
+<!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+  <div class="mdl-layout mdl-js-layout">
+	<header class="mdl-layout__header mdl-layout__header--scroll">
+	  <div class="mdl-layout__header-row">
+		<!-- Title -->
+		<span class="mdl-layout-title">EstacionApp</span>
+		<!-- Add spacer, to align navigation to the right -->
+		<div class="mdl-layout-spacer"></div>
+		<!-- Navigation -->
+		<nav class="mdl-navigation">
+		  <a class="mdl-navigation__link" href=""><img src="../images/man.png" class="img-direita"/></a>
+		  <a class="mdl-navigation__link" href=""><img src="../images/helpdesk.png" class="img-direita"/></a>
+		  <a class="mdl-navigation__link" href="">			   <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+			<span class="glyphicon glyphicon-envelope"></span>
+		</button></a>
+		  <a class="mdl-navigation__link" href="">			   <a href="login.html">
+			<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+				<span class="glyphicon glyphicon-off"></span>
+			</button>
+		</a></a>
+		</nav>
+	  </div>
+	</header>
+	<div class="mdl-layout__drawer">
+	  <span class="mdl-layout-title">EstacionApp</span>
+	  <nav class="mdl-navigation">
+		<a class="mdl-navigation__link" href="index.html">Home</a>
+		<a class="mdl-navigation__link" href="entrada.html">Entrada</a>
+		<a class="mdl-navigation__link" href="cobranca.html">Cobrança</a>
+		<a class="mdl-navigation__link" href="relatorio.html">Relatorio</a>
+		<div style="margin: 50px 0 50px 0" align="center">
+		<img src="../images/google+.png" class="lateral-baixo"/>
+		<img src="../images/facebook.png" class="lateral-baixo"/> 
+		<img src="../images/twitter.png" class="lateral-baixo"/>
+	</div>
+	  </nav>
+	</div>
+	<main class="mdl-layout__content">
+	  <div class="page-content">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-2"></div>
+		<div class="col-lg-3" style="margin-top: 40px;">
+			<div class="demo-card-event mdl-card mdl-shadow--2dp">
+				<div class="mdl-card__title mdl-card--expand">
+				  <h4>
+					Saldo Disponivel:<br>
+					R$ 15,00<br>
+				  </h4>
+				</div>
+				<div class="mdl-card__actions mdl-card--border">
+					<div class="col-lg-9">
+						<form action="#">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							  <input class="mdl-textfield__input" type="text" id="sample3">
+							  <label class="mdl-textfield__label" for="sample3">Inserir crédito</label>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-2">
+						<button id="inserirbtn"  style="margin-top: 1vh;" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-button--primary">
+							<i class="material-icons">add</i>
+						  </button>
+						  <div class="mdl-tooltip" for="inserirbtn">
+							Inserir credito
+						</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="col-lg-1"></div>
+						<img id="tt2" class="col-lg-9" src="../images/pagamento.png" />
+						<div class="mdl-tooltip mdl-tooltip--large" for="tt2">
+							Bandeiras Aceitas
+						</div>
+					</div>
+
+				</div>
+			  </div>
+	
+	
+			<div class="col-lg-6">
+				<button style="margin-top: 10px; margin-left: 5vw;" class="mdl-button mdl-js-button mdl-button--primary">
+					<a style="color: #3f51b5; text-decoration: unset;"href="entrada.html" >Pagar</a>
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+				  </button>
+			</div>
+	
+	
+		</div>
+				
+	<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+		<div class="mdl-snackbar__text"></div>
+		<button class="mdl-snackbar__action" type="button"></button>
+	  </div>
+
+	  </div>
+	</main>
+  </div>
+</body>
+</html>
