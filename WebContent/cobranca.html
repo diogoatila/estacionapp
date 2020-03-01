@@ -7,10 +7,34 @@
 <link href="../css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="../dependencies/material.min.css">
 <script src="../dependencies/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body onload="calcula()">
-	<!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+	<!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+  <div class="mdl-layout mdl-js-layout">
+	<header class="mdl-layout__header mdl-layout__header--scroll">
+	  <div class="mdl-layout__header-row">
+		<!-- Title -->
+		<span class="mdl-layout-title">EstacionApp</span>
+		<!-- Add spacer, to align navigation to the right -->
+		<div class="mdl-layout-spacer"></div>
+		<!-- Navigation -->
+		<nav class="mdl-navigation">
+		  <a class="mdl-navigation__link" href=""><img src="../images/man.png" class="img-direita"/></a>
+		  <a class="mdl-navigation__link" href=""><img src="../images/helpdesk.png" class="img-direita"/></a>
+		  <a class="mdl-navigation__link" href="">			   <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+			<span class="glyphicon glyphicon-envelope"></span>
+		</button></a>
+		  <a class="mdl-navigation__link" href="">			   <a href="login.html">
+			<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+				<span class="glyphicon glyphicon-off"></span>
+			</button>
+		</a></a>
+		</nav>
+	  </div>
+	</header>
 	<div class="mdl-layout__drawer">
 	  <span class="mdl-layout-title">EstacionApp</span>
 	  <nav class="mdl-navigation">
@@ -18,12 +42,18 @@
 		<a class="mdl-navigation__link" href="entrada.html">Entrada</a>
 		<a class="mdl-navigation__link" href="cobranca.html">Cobrança</a>
 		<a class="mdl-navigation__link" href="relatorio.html">Relatorio</a>
+		<div style="margin: 50px 0 50px 0" align="center">
+		<img src="../images/google+.png" class="lateral-baixo"/>
+		<img src="../images/facebook.png" class="lateral-baixo"/> 
+		<img src="../images/twitter.png" class="lateral-baixo"/>
+	</div>
 	  </nav>
 	</div>
 	<main class="mdl-layout__content">
 	  <div class="page-content">
-				<!-- INSERIR PAGINAS AQUI -->
-	<div class="col-lg-6">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-1"></div>
+	<div class="col-lg-4" style="margin-top: 4.3vh;">
 		<div class="table-responsive col-md-12">
 							<table class="table table-striped" cellspacing="0" cellpadding="0">
 								<thead>
@@ -38,10 +68,21 @@
 									</section>
 									
 										 <tr>
-										<th>Código do convênio:</th>
-										<th><input type="text" class="form-control col-lg-10" style="margin-bottom: 0px"></input></th>
+									
+										<th>
+											<form action="#">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												  <input class="mdl-textfield__input" type="text" id="sample3">
+												  <label class="mdl-textfield__label" for="sample3">Código do convênio</label>
+												</div>
+											</form>
+			
+										</th>
 										<br>
-										<th><input type="button" value="Inserir" onclick="convenio()"></th>
+										<th>
+											
+											<input type="button" style="margin-bottom: 2vh;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="Inserir" onclick="convenio()">
+										</th>
 									</tr>
 									<tr>
 										
@@ -51,42 +92,9 @@
 							   </table>
 		</div>
 	</div>
-	
-	
-		<div align="center" class="col-lg-3">
-			<div style="margin-bottom: 430px" class="col-lg-12">
-				<img src="../images/man.png" class="img-direita"/> 
-				<img src="../images/helpdesk.png" class="img-direita"/>
-				<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-					<span class="glyphicon glyphicon-envelope"></span>
-				</button>
-				<a href="login.html">
-					<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-						<span class="glyphicon glyphicon-off"></span>
-					</button>
-				</a>
-	
-	
-			</div>
-	
-			<div align="center">
-				<a href="relatorio.html" type="button" class="btn btn-success" aria-label="entrada">
-					<p>Pagar</p>
-					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-				</a>
-				<a href="entrada.html" type="button" class="btn btn-danger">
-					<p>Voltar</p>
-					<span class="glyphicon glyphicon-remove"></span>
-				</a>
-			</div>
-	
-		</div>
-	
-	
-		</div>
-		</div>
-	</main>
 	</div>
+	</main>
+	
 
 	<script src="calculavalor.js">
           
