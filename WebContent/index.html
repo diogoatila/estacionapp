@@ -61,43 +61,50 @@
 		
 		<div class="col-lg-3" style="margin-top: 40px;">
 			<div>
-				<h3 align="center">Insira créditos ou pague seu ticket</h3>
+				<h3 align="center">Cadastre seu cartão ou pague seu ticket</h3>
 			</div>
-			<div class="demo-card-event mdl-card mdl-shadow--2dp">
-				<div class="mdl-card__title mdl-card--expand">
-					
-				  <h4>
-					Saldo Disponivel:<br>
-					R$ 15,00<br>
-				  </h4>
+			<style>
+				.demo-container {
+					width: 100%;
+					max-width: 350px;
+					margin: 50px auto;
+				}
+		
+				form {
+					margin: 30px;
+				}
+				input {
+					width: 200px;
+					margin: 10px auto;
+					display: block;
+				}
+		
+			</style>
+			<script src="../WebContent/card.js"></script>
+			<div class='card-wrapper'></div>
+			<form id="formCard">
+				<div>
+					<input type="text" name="number" placeholder="Numero Cartão" />
+					<input type="text" name="name" placeholder="Nome" />
 				</div>
-				<div class="mdl-card__actions mdl-card--border">
-					<div class="col-lg-9">
-						<form action="#">
-							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							  <input class="mdl-textfield__input" type="text" id="sample3">
-							  <label class="mdl-textfield__label" for="sample3">Inserir crédito</label>
-							</div>
-						</form>
-					</div>
-					<div class="col-lg-2">
-						<button id="inserirbtn"  style="margin-top: 1vh;" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-button--primary">
-							<i class="material-icons">add</i>
-						  </button>
-						  <div class="mdl-tooltip" for="inserirbtn">
-							Inserir credito
-						</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="col-lg-1"></div>
-						<img id="tt2" class="col-lg-9" src="../images/pagamento.png" />
-						<div class="mdl-tooltip mdl-tooltip--large" for="tt2">
-							Bandeiras Aceitas
-						</div>
-					</div>
-
+				<div>
+					<input type="text" name="expiry" placeholder="Data" />
+					<input type="text" name="cvc" placeholder="CVC" />
 				</div>
-			  </div>
+				<div>
+					<input id="btn" type="submit" value="Cadastrar cartão" />
+				</div>
+			</form>
+			<script>
+				let cartao = new Card({
+					form: '#formCard',
+					container: '.card-wrapper',
+					// Altera o placeholder
+					placeholders: {
+						name: 'Seu nome aqui'
+					}
+				});
+			</script>
 	
 	
 			<div class="col-lg-6">
